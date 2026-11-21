@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite | Crave it. Click it. Savour it.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#home" class="brand">
+            <img src="Aunt.jpeg" alt="QuickBite Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#cravematch">CraveMatch</a></li>
+            <li><a href="homebite/homebite.html">HomeBite</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <button class="cart-btn" onclick="showCart()">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tagline">WELCOME TO QUICKBITE</p>
+        <h1>Crave it.<br>Click it.<br><span>Savour it.</span></h1>
+
+        <p>
+            From traditional South Indian delicacies to delicious
+            homemade meals, discover your next favourite dish.
+        </p>
+
+        <a href="#explore" class="main-btn">Explore Food</a>
+        <a href="homebite/homebite.html" class="secondary-btn">
+            Discover HomeBite
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_01.jpg"
+          alt="Golden South Indian masala dosa">
+    </div>
+</section>
+
+<section class="features">
+    <h2>More Than Just <span>Food Delivery</span></h2>
+
+    <div class="feature-container">
+        <div class="feature-card">
+            <div>⚡</div>
+            <h3>Quick Delivery</h3>
+            <p>Discover delicious meals with an easy ordering experience.</p>
+        </div>
+
+        <div class="feature-card">
+            <div>🎯</div>
+            <h3>CraveMatch</h3>
+            <p>Find food recommendations based on your mood.</p>
+        </div>
+
+        <div class="feature-card">
+            <div>🏡</div>
+            <h3>HomeBite</h3>
+            <p>Support home chefs and enjoy authentic homemade dishes.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cravematch" id="cravematch">
+    <p class="tagline">YOUR CRAVINGS, OUR SUGGESTIONS</p>
+    <h2>What's Your <span>Mood Today?</span></h2>
+
+    <p>Select your mood and discover something delicious.</p>
+
+    <div class="mood-buttons">
+        <button onclick="recommendFood('happy')">😊 Happy</button>
+        <button onclick="recommendFood('spicy')">🌶️ Spicy Mood</button>
+        <button onclick="recommendFood('comfort')">❤️ Comfort Food</button>
+        <button onclick="recommendFood('sweet')">🍰 Sweet Cravings</button>
+    </div>
+
+    <h3 id="recommendation">
+        Your food recommendation will appear here!
+    </h3>
+</section>
+
+<section class="explore" id="explore">
+    <p class="tagline">MADE FOR YOUR TASTE BUDS</p>
+    <h2>Authentic South Indian <span>Delights</span></h2>
+    <p>Fresh flavours, traditional recipes and delicious meals.</p>
+
+    <div class="food-container">
+
+        <div class="food-card">
+            <img class="food-image"
+                 src="https://commons.wikimedia.org/wiki/Special:FilePath/Masala_dosa_01.jpg"
+                 alt="Masala dosa">
+            <div class="food-info">
+                <h3>Masala Dosa</h3>
+                <p>⭐ 4.8 | South Indian</p>
+                <h3 class="price">₹90</h3>
+                <button onclick="addToCart('Masala Dosa',90)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img class="food-image"
+                 src="https://commons.wikimedia.org/wiki/Special:FilePath/Dosa_with_chutney_and_sambar_traditionally_served_in_banana_leaf.jpg"
+                 alt="Dosa with chutney and sambar">
+            <div class="food-info">
+                <h3>Dosa & Sambar</h3>
+                <p>⭐ 4.9 | Traditional</p>
+                <h3 class="price">₹80</h3>
+                <button onclick="addToCart('Dosa and Sambar',80)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img class="food-image"
+                 src="https://commons.wikimedia.org/wiki/Special:FilePath/Malabar_biriyani.jpg"
+                 alt="Malabar biryani">
+            <div class="food-info">
+                <h3>Malabar Biryani</h3>
+                <p>⭐ 4.9 | Special</p>
+                <h3 class="price">₹180</h3>
+                <button onclick="addToCart('Malabar Biryani',180)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img class="food-image"
+                 src="https://commons.wikimedia.org/wiki/Special:FilePath/Medhu_Vadai_is_a_popular_snack_in_Tamil_Nadu.JPG"
+                 alt="Medu vada">
+            <div class="food-info">
+                <h3>Medu Vada</h3>
+                <p>⭐ 4.7 | South Indian Snack</p>
+                <h3 class="price">₹60</h3>
+                <button onclick="addToCart('Medu Vada',60)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="homebite-promo">
+    <div class="promo-content">
+        <p class="tagline">HOMEMADE WITH LOVE</p>
+        <h2>Discover the Taste of <span>Home.</span></h2>
+        <p>
+            Experience authentic homemade food prepared by
+            talented home chefs in your neighbourhood.
+        </p>
+        <a href="homebite/homebite.html" class="main-btn">
+            Explore HomeBite →
+        </a>
+    </div>
+
+    <img class="promo-image"
+         src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Cw_400/gcm1pfhhgqr9wu7poman"
+         alt="Traditional South Indian food spread">
+</section>
+
+<section class="about" id="about">
+    <h2>Why <span>QuickBite?</span></h2>
+    <p>
+        QuickBite brings restaurant favourites and authentic homemade
+        food together in one convenient platform.
+    </p>
+</section>
+
+<footer>
+    <img src="assets/quickbite-logo.jpeg" alt="QuickBite logo">
+    <p>Crave it. Click it. Savour it.</p>
+    <p>© 2026 QuickBite. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
